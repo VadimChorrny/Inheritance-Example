@@ -1,5 +1,5 @@
 #include <iostream>
-#include "Car.h"
+#include "SpaceBus.h"
 using namespace std;
 
 
@@ -12,32 +12,34 @@ int main()
 	w.setLicensePlate("AA8888BK");
 	w.print();*/
 
-	Vehicle car;
-	car.setLicensePlate("AA9999AA");
-	car.setSpeed(120);
-	car.print();
+	//Vehicle car;
+	//car.setLicensePlate("AA9999AA");
+	//car.setSpeed(120);
+	//car.print();
 
-	cout << "Cast from CAR -------> Vehicle\n";
+	//cout << "Cast from CAR -------> Vehicle\n";
 
-	Vehicle v = (Vehicle&)car; // neyavne vid children do base
+	//Vehicle v = (Vehicle&)car; // neyavne vid children do base
 
-	v.print();
+	//v.print();
 
-	Vehicle& refCar = (Vehicle&)car;
-	refCar.setSpeed(100);
-	refCar.print();
+	//Vehicle& refCar = (Vehicle&)car;
+	//refCar.setSpeed(100);
+	//refCar.print();
 
-	Vehicle* ptrCar = &(Vehicle&)car;
-	ptrCar->setSpeed(100);
-	ptrCar->print();
+	//Vehicle* ptrCar = &(Vehicle&)car;
+	//ptrCar->setSpeed(100);
+	//ptrCar->print();
 
-	Car* ptr = (Car*)&car;
-	ptr->print();
+	//Car* ptr = (Car*)&car;
+	//ptr->print();
 
-	Car testCar = *((Car*)&car);
-	cout << "\t Cast from vehicle ---> Car(unsafe method) \n";
-	testCar.print();
+	//Car testCar = *((Car*)&car);
+	//cout << "\t Cast from vehicle ---> Car(unsafe method) \n";
+	//testCar.print();
 
+	SpaceBus s(10);
+	s.print();
 
 	return 0;
 }

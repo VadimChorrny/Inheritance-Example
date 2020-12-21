@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{ca1c8f49-01f9-4883-a07c-22b518815e4a}</ProjectGuid>
-    <RootNamespace>Inheritance</RootNamespace>
+    <ProjectGuid>{05b8dcc6-796c-4a0e-b277-6a00c2097bd8}</ProjectGuid>
+    <RootNamespace>Pass</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -139,15 +139,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Car.cpp" />
+    <ClCompile Include="ForeignPassport.cpp" />
+    <ClCompile Include="Passport.cpp" />
     <ClCompile Include="Source.cpp" />
-    <ClCompile Include="SpaceBus.cpp" />
-    <ClCompile Include="Vehicle.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Car.h" />
-    <ClInclude Include="SpaceBus.h" />
-    <ClInclude Include="Vehicle.h" />
+    <ClInclude Include="ForeignPassport.h" />
+    <ClInclude Include="Passport.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
