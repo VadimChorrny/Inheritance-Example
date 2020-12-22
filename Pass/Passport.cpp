@@ -1,13 +1,13 @@
 #include "Passport.h"
 
-Passport::Passport(const string& name, const string& seriya, const int& number,const int& day, const int& month,const int& year)
+Passport::Passport(const string& name, const string& seriya, const int& number,const Date& birth, const Date& issuance)
 {
-	this->name = name;
-	this->seriya = seriya;
-	this->number = number;
-	this->day = day;
-	this->month = month;
-	this->year = year;
+	setName(name);
+	setSeriya(seriya);
+	setNumber(number);
+	setBirtday(birth);
+	setIssuance(issuance);
+
 	
 }
 
@@ -44,29 +44,30 @@ void Passport::setNumber(const int& number)
 		cerr << "error with number" << endl;
 }
 
-void Passport::setBirtday(const int& day, const int& month, const int& year)
+void Passport::setBirtday(const Date& birth)
 {
-	if (day == 0 && day < 31)
-		this->day = day;
-	else if (month == 0 && month < 12)
-		this->month = month;
-	else if (year == 0 && year > 1900 && year < 2010)
-		this->year = year;
-	else
-		cerr << "error with day" << endl;
-
-
+	this->birth = birth;
 }
 
-void Passport::print() const
+void Passport::setIssuance(const Date& issuance)
 {
+	this->issuance = issuance;
+}
+
+void Passport::print() 
+{
+	cout << endl;
 	cout << "____WORKED PRINT_____" << endl;
 	cout << "Name:\t" << name << endl;
-	cout << "Seriya:\t" << seriya << "\n Number:\t"<< number << endl;
-	cout << "Day:\t" << day << endl;
-	cout << "Month:\t" << month << endl;
-	cout << "Year:\t" << year << endl;
+	cout << "Seriya:\t" << seriya << "\nNumber:\t"<< number << endl;
+	cout << "Birthday:\t";
+	birth.print();
+	cout << "Date issuance:\t" << endl;
+	issuance.print();
+	cout << "_________________________" << endl;
 
 	
 
 }
+
+
