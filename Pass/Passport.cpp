@@ -1,14 +1,12 @@
 #include "Passport.h"
 
-Passport::Passport(const string& name, const string& seriya, const int& number,const Date& birth, const Date& issuance)
+Passport::Passport(const string& name, const string& seriya, const int& number, const Date& birth, const Date& issuance)
 {
 	setName(name);
 	setSeriya(seriya);
 	setNumber(number);
 	setBirtday(birth);
 	setIssuance(issuance);
-
-	
 }
 
 Passport::~Passport()
@@ -30,7 +28,7 @@ void Passport::setName(const string& name)
 
 void Passport::setSeriya(const string& seriya)
 {
-	if (seriya != seriya)
+	if (seriya != " ")
 		this->seriya = seriya;
 	else
 		cerr << "error with seriya" << endl;
@@ -62,7 +60,7 @@ void Passport::print()
 	cout << "Seriya:\t" << seriya << "\nNumber:\t"<< number << endl;
 	cout << "Birthday:\t";
 	birth.print();
-	cout << "Date issuance:\t" << endl;
+	cout << "Date issuance:\t";
 	issuance.print();
 	cout << "_________________________" << endl;
 
